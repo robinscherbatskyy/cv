@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/graphik');
+    
+    body {
+      font-family: 'Graphik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #FFFFFF;
+      color: #0A0B0D;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    
+    .header {
+      background: linear-gradient(180deg, #d0dcfc 0%, #ffffff 300px);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .token-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .profile-circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #0052FF 0%, #1652F0 100%);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 600;
+      box-shadow: 0 8px 16px rgba(22, 82, 240, 0.16);
+    }
+    
+    .token-name {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #0A0B0D;
+    }
+    
+    .token-pair {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0052FF 0%, #1652F0 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 8px rgba(22, 82, 240, 0.16);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .stat-card {
+      background: linear-gradient(180deg, #e7edfd 0%, #ffffff 300px);
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.2s;
+      border: 1px solid #E8E8E8;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-2px);
+    }
+    
+    .stat-label {
+      color: #5B616E;
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .stat-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0A0B0D;
+    }
+    
+    .section {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      border: 1px solid #E8E8E8;
+    }
+    
+    .section-title {
+      color: #0052FF;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .transaction-history {
+      border-left: 2px solid #E8E8E8;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+    
+    .transaction {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .transaction::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: #0052FF;
+      border-radius: 50%;
+      border: 4px solid #FFFFFF;
+    }
+    
+    .transaction-date {
+      color: #5B616E;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    
+    .transaction-hash {
+      font-family: monospace;
+      color: #0052FF;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+	
+	.role-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .skill-tag {
+      display: inline-block;
+      background: #F0F5FF;
+      color: #0052FF;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .contact-info {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .contact-item {
+      color: #5B616E;
+      font-weight: 500;
+    }
+    
+    .projects {
+      margin-top: 15px;
+      padding: 15px;
+      background: #F7F8FA;
+      border-radius: 8px;
+      border: 1px solid #E8E8E8;
+    }
+    
+    .price-change {
+      color: #05B169;
+      font-weight: 500;
+    }
+	
+	.organization-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0A0B0D;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="token-info">
+      <div class="profile-circle">VC</div>
+      <div>
+        <div class="token-name">VRUSHANK CHAITANYA</div>
+        <div class="token-pair">$VRUS/HIRE • QA & Compliance Specialist</div>
+      </div>
+    </div>
+    <div class="contact-info">
+      <span class="contact-item">📱 +91 87933 75497</span>
+      <span class="contact-item">📧 <a href="mailto:vrushank.chaitanya@gmail.com" class="contact-link">vrushank.chaitanya@gmail.com</a></span>
+      <span class="contact-item">🔗 <a href="https://linkedin.com/in/vrushankchaitanya" target="_blank" class="contact-link">linkedin.com/in/vrushankchaitanya</a></span>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Crypto Ecosystem Experience</div>
+      <div class="stat-value price-change">7+ Years</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">QA & Compliance Experience</div>
+      <div class="stat-value price-change">4+ Years</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Projects Worked On</div>
+      <div class="stat-value price-change">15+ Projects</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💫 PROFILE</div>
+    <p>Since 2017, I’ve been deeply involved in the cryptocurrency space, where an initial curiosity quickly evolved into a passion for decentralization and blockchain technology. As an early DeFi adopter, I’ve gained hands-on experience across a range of protocols, including smart contracts, decentralized applications (DApps), and yield farming strategies and have been an active participant ever since and like to stay updated in the space. <br><br> In my current role, I have extensive experience in console title certification and compliance processes, particularly with Sony’s PlayStation TRC guidelines & lead the QA process for ensuring adherence to complex regulatory frameworks, developing and executing compliance strategies, and identifying potential risks within certification workflows. My ability to navigate intricate compliance issues, combined with a deep understanding of both blockchain technology and financial systems, positions me as a versatile professional capable of ensuring high-quality standards in a fast-paced and evolving industry.</p>
+  </div>
+
+<div class="section">
+    <div class="section-title">💼 PROFESSIONAL EXPERIENCE</div>
+    <div class="organization-name">Ubisoft India</div>
+    <div class="transaction-history">
+      <div class="transaction">
+        <div class="role-title">Sony Compliance Specialist I</div>
+        <div class="transaction-date">July 2023 - Present</div>
+        <div class="transaction-hash">0x7f4d8c3e...f9a2</div>
+        <ul class="bullet-list">
+          <li>Conduct thorough testing and ensure compliance with PlayStation TRCs for multiple titles</li>
+          <li>Contributed to successful launch of 5+ titles with efficient submission processes</li>
+          <li>Reduced compliance violations by <span class="price-change">20% avg. </span>through systematic review processes</li>
+		  <li>Facilitate communication between Release Managers and DevNet/CertOps teams for compliance inquiries</li>
+		  <li>Manage public Open/Close beta setups on first-party platforms</li>
+		  <li>Create and maintain dashboards with relevant metrics and information for internal team's use for the projects</li>
+		  <li>Create and maintain detailed compliance documentation and reports to provide actionable insights</li>
+		  <li>Provide comprehensive training to FQC members on compliance policies</li>
+        </ul>
+		<div class="projects">
+        <strong>Projects:</strong> The Crew Motorfest, Skull & Bones, Prince of Persia: The Lost Crown, Just Dance, For Honor, Trackmania, UNO (PS5)
+      </div>
+      </div>
+      
+      
+      <div class="transaction">
+        <div class="role-title">QA Tester II</div>
+        <div class="transaction-date">March 2022 - June 2023</div>
+        <div class="transaction-hash">0x3a1b5c2d...e8f4</div>
+        <ul class="bullet-list">
+          <li>Managed and act as SME for 4+ core features simultaneously from Alpha to Release</li>
+          <li>Identified <span class="price-change">300+ </span>high-impact issues across various game components</li>
+		  <li>Led LiveOps testing for PC, Consoles (Xbox & PS), and mobile platforms</li>
+		  <li>Developed automation testing tools and comprehensive test plans</li>
+		  <li>Trained junior members through internal Buddy Mentorship program</li>
+		  <li><span class="price-change">Received Spotlight Recognition Award (Q1 2023)</span></li>
+        </ul>
+      </div>
+
+      <div class="transaction">
+        <div class="role-title">QA Tester I</div>
+        <div class="transaction-date">March 2020 - March 2022</div>
+        <div class="transaction-hash">0x9e8d7c6b...b5a3</div>
+        <ul class="bullet-list">
+          <li>Conducted comprehensive testing of game features and functionality</li>
+          <li>Developed strong foundation in compliance fundamentals</li>
+		  <li>Managed bug tracking and resolution through Jira</li>
+		  <li>Initiated monthly newsletter updates for The Crew 2 project team</li>
+        </ul>
+      </div>
+	  <div class="projects">
+        <strong>Projects:</strong> The Crew 2 (10+ TUs), The Crew Motorfest, Ghost Recon Breakpoint
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">⛓️ CRYPTO EXPERIENCE</div>
+    <div class="transaction-history">
+      <div class="transaction">
+        <div class="role-title">Independent Crypto Analyst & Enthusiast</div>
+        <div class="transaction-date">2017 - Present</div>
+        <div class="transaction-hash">0x1e2f3d4c...a7b9</div>
+        <ul class="bullet-list">
+          <li>(2017-2019) Participated in multiple ICO bounty programs, conducting peer reviews for whitepapers </li>
+          <li>Engaged in bug bounty programs for blockchain projects</li>
+          <li>(2019-2020) Created and deployed multiple "meme" hype tokens on BNB Chain with advanced features:</li>
+          <ul class="bullet-list">
+            <li>Token locks for team and investor allocations</li>
+            <li>Customizable sell taxes to discourage dumping</li>
+            <li>Automatic liquidity addition on buy/sell transactions</li>
+            <li>Implemented auto-burn and transfer mechanisms</li>
+          </ul>
+          <li>Gained practical knowledge of Solidity and smart contract deployment</li>
+          <li>(2020-current) Active participant in DeFi protocols and keeping up to date with relevant platforms and news</li>
+          <li>Understanding of typical fraud schemes in crypto (e.g., Ponzi schemes, pump-and-dump schemes).</li>
+<li>Understanding of blockchain analytics tools (Chainalysis, Elliptic) to trace funds and investigate suspicious transactions.</li>		  
+		 <li> Familiarity with automated KYC tools (e.g., Jumio, Onfido) and manual review processes.</li>
+		 <li>Aware about KYC (CDD, EDD) / KYT & AML regulations  surrounding CEXs in the crypto space for retail and PEP users.</li>
+		  <li>Knowledge of token classifications (security tokens vs. utility tokens) and their regulatory implications.</li>
+		  <li>Basic knowledge of global AML frameworks such as the Financial Action Task Force (FATF) guidelines and with specific AML requirements for cryptocurrencies </li>
+		  <li>Awareness of local regulations concerning crypto, such as MiCA (Markets in Crypto-Assets) regulation in Europe.</li>
+		  
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🛠 TECHNICAL SKILLS</div>
+    <div>
+	  <span class="skill-tag">Jira</span>
+	  <span class="skill-tag">TestRail</span>
+	  <span class="skill-tag">X-Ray</span>
+	  <span class="skill-tag">SQL</span>
+	  <span class="skill-tag">Power BI Basics</span>
+	  <span class="skill-tag">Microsoft Office Apps</span>
+	  <span class="skill-tag">Google Apps</span>
+	  <span class="skill-tag">Powerpoint / Slides </span>
+	  <span class="skill-tag">Confluence</span>
+      <span class="skill-tag">DeFi Protocols</span>
+      <span class="skill-tag">Smart Contracts</span>
+      <span class="skill-tag">Web3 DApps</span>
+      <span class="skill-tag">Yield Farming</span>
+      <span class="skill-tag">Solidity Basics</span>
+	  <span class="skill-tag">Transaction Monitoring</span>	  
+      <span class="skill-tag">On-chain Analysis</span>
+	  <span class="skill-tag">Generative AI Power user</span>
+      
+      
+    </div>
+  </div>
+    <div class="section">
+    <div class="section-title">🤝 SOFT SKILLS</div>
+    <div>
+	  <span class="skill-tag">Quick Learner</span>
+      <span class="skill-tag">Problem Solving</span>
+      <span class="skill-tag">Communication</span>
+      <span class="skill-tag">Team Collaboration</span>
+      <span class="skill-tag">Attention to Detail</span>
+      <span class="skill-tag">Adaptability</span>
+      <span class="skill-tag">Time Management</span>
+      <span class="skill-tag">Critical Thinking</span>
+      <span class="skill-tag">Leadership</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📚 EDUCATION</div>
+    <div class="role-title">B.Sc in Animation</div>
+    <div class="token-symbol">Dr. D.Y. Patil ACS College | 2019-2021</div>
+    <div class="price-change">First Class with Distinction: 80 percentile</div>
+    <p>Specialized coursework: Emerging technologies, Game Design & Production, Digital Editing, New Media</p>
+  </div>
+</body>
+</html>
